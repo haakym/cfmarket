@@ -1,0 +1,19 @@
+<h1>CoinFalcon Prices!</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Vol</th>
+    <th>24 hrs %</th>
+  </tr>
+ 
+<% @markets.each do |market| %>
+  <tr>
+    <td><%= market['name'] %></td>
+    <td><%= market['last_price'] %></td>
+    <td><%= market['volume'] %></td>
+    <td><%= market['change_in_24h'] %></td>
+  </tr>
+<% end %>
+</table>
